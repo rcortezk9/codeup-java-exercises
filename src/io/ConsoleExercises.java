@@ -40,9 +40,10 @@ public class ConsoleExercises {
 
         double lenghtResult = Double.parseDouble(length);
         double widthResult = Double.parseDouble(width);
+        double heightResult = Double.parseDouble(height);
+
         double area = lenghtResult * widthResult;
         double perimeter = 2*lenghtResult + 2*widthResult;
-        double heightResult = Double.parseDouble(height);
         double volume = lenghtResult*widthResult*heightResult;
 
         System.out.println("The area is " + formatter.format(area));
