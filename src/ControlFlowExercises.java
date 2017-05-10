@@ -4,15 +4,19 @@
 public class ControlFlowExercises {
     public static void main(String[] args) {
 //        int i = 5;
-        int count =100;
+        int count = 100;
 
 //        while (i <=15){
 //            System.out.println(i);
 //            i++;
 //        }
-        do{
-            System.out.println("count is:" + count);
-            count = count - 5;
-        } while (count >= -10);
+//        do{
+//            System.out.println("count is: " + count);
+//            count -= 5;
+//        } while (count >= -10);
+
+        for(int i = 5; i<=15; i++){
+            System.out.println("count is: " + i);
+        }
     }
 }
