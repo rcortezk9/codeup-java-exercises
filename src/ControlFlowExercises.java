@@ -3,8 +3,8 @@
  */
 public class ControlFlowExercises {
     public static void main(String[] args) {
-        int i = 5;
-        int count = 0;
+//        int i = 5;
+        int count =100;
 
 //        while (i <=15){
 //            System.out.println(i);
@@ -12,7 +12,7 @@ public class ControlFlowExercises {
 //        }
         do{
             System.out.println("count is:" + count);
-            count = count + 2;
-        } while (count <= 100);
+            count = count - 5;
+        } while (count >= -10);
     }
 }
