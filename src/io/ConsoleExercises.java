@@ -27,22 +27,20 @@ public class ConsoleExercises {
 //        String yesterday = sc.nextLine();
 //        System.out.println("You entered: " + yesterday);
 
-
+        // Input
         System.out.println("Enter the length of the room?");
         double lenght = sc.nextDouble();
         System.out.println("Enter the width of the room?");
         double width = sc.nextDouble();
         System.out.println("Enter the height of the room?");
         double height = sc.nextDouble();
-
+        // Process
         double area = lenght * width;
         double perimeter = 2*lenght + 2*width;
         double volume = lenght * width * height;
-
+        // Output
         System.out.printf("The area is %.2f\n", area);
-        System.out.printf("The perimeter is %2f\n", perimeter);
+        System.out.printf("The perimeter is %.2f\n", perimeter);
         System.out.printf("The volume of the room is %.2f\n", volume);
-
-
     }
 }
