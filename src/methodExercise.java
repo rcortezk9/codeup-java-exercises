@@ -3,23 +3,27 @@
  */
 public class methodExercise {
 
-    public static int addition() {
-        return 0;
+    public static double add(double x, double y) {
+        return x + y;
     }
 
-    public static double subtraction(){
-        return 0;
+    public static double subtract(double x, double y){
+        return x - y;
     }
 
-    public static double multiplication(){
-        return 0;
+    public static double multiply(double x, double y){
+        return x * y;
     }
 
-    public static double division(){
-        return 0;
+    public static double divid(double x, double y){
+        return x/y;
     }
 
     public static void main(String[] args) {
+        System.out.println(add(4,5));
+        System.out.println(subtract(5,4));
+        System.out.println(multiply(4,5));
+        System.out.println(divid(9,3));
 
     }
 
