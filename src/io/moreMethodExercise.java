@@ -7,9 +7,7 @@ import java.util.Scanner;
  */
 public class moreMethodExercise {
 
-    public static int getInteger(int min, int max){
-        Scanner scan = new Scanner(System.in);
-
+    public static int getInteger(Scanner scan, int min, int max){
         System.out.println("Enter a number between " + min + " and " + max + ": ");
         int userInput = scan.nextInt();
 
@@ -18,10 +16,8 @@ public class moreMethodExercise {
             return userInput;
         } else {
             System.out.println("Invalid number, try again");
-            return getInteger(min, max);
+            return getInteger(scan, min, max);
         }
-
-
     }
 
     public static long factorial(int n){
@@ -40,7 +36,7 @@ public class moreMethodExercise {
         int max = 10;
 
         do {
-            int numberFactorial = getInteger(min, max);
+            int numberFactorial = getInteger(scan, min, max);
 
             System.out.println("The factorial of " + numberFactorial + " is " + factorial(numberFactorial));
             System.out.println("Do you want to continue? (y/n)");
