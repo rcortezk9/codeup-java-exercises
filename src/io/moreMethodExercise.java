@@ -7,9 +7,9 @@ import java.util.Scanner;
  */
 public class moreMethodExercise {
 
-    public static int getInteger(Scanner scan, int min, int max){
+    public static long getInteger(Scanner scan, long min, long max){
         System.out.println("Enter a number between " + min + " and " + max + ": ");
-        int userInput = scan.nextInt();
+        long userInput = scan.nextLong();
 
         if (userInput >= min && userInput <= max) {
             System.out.println("You have selected " + userInput);
@@ -20,8 +20,8 @@ public class moreMethodExercise {
         }
     }
 
-    public static long factorial(int n){
-        if (n <= 1){
+    public static long factorial(long n){
+        if (n == 1){
             return 1;
         } else {
             return (n * factorial(n - 1));
@@ -32,13 +32,13 @@ public class moreMethodExercise {
         Scanner scan = new Scanner (System.in);
         String wantsToContinue;
 
-        int min = 1;
-        int max = 10;
+        long min = 1;
+        long max = 10;
 
         do {
-            int numberFactorial = getInteger(scan, min, max);
+            long numberFactorial = getInteger(scan, min, max);
 
-            System.out.println("The factorial of " + numberFactorial + " is " + factorial(numberFactorial));
+            System.out.println(numberFactorial + "! = " + factorial(numberFactorial));
             System.out.println("Do you want to continue? (y/n)");
             wantsToContinue = scan.next();
 
