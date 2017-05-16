@@ -1,4 +1,4 @@
-package io;
+package Java1;
 
 import java.util.Scanner;
 
@@ -42,6 +42,6 @@ public class moreMethodExercise {
             System.out.println("Do you want to continue? (y/n)");
             wantsToContinue = scan.next();
 
-        } while (wantsToContinue.equalsIgnoreCase("y"));
+        } while ("y".equalsIgnoreCase(wantsToContinue));
     }
 }

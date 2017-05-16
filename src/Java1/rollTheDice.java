@@ -1,4 +1,4 @@
-package io;
+package Java1;
 
 import java.util.Scanner;
 import java.util.Random;
@@ -26,4 +26,6 @@ public class rollTheDice {
             wantsToContinue = input.next();
         } while (wantsToContinue.equalsIgnoreCase("y"));
     }
+
+
 }
