@@ -7,7 +7,12 @@ public class CircleApp {
     public static void main(String[] args) {
         Input sc = new Input();
 
-        System.out.println("Enter the radius.");
-//        System.out.println(sc.);
+        System.out.println("Give me the radius");
+        double radius = sc.getDouble();
+
+        Circle c = new Circle(radius);
+
+        System.out.println(c.getArea());
+        System.out.println(c.getCircumference());
     }
 }
