@@ -10,17 +10,29 @@ public class Rectanlge {
     }
 
     public double getArea(){
-        return 2 * length + 2 * width;
-    }
-
-    public double getPerimeter(){
         return length * width;
     }
 
+    public double getPerimeter(){
+        return 2 * length + 2 * width;
+    }
+
 }
+
 class Square extends Rectanlge{
+    private double side;
 
     public Square(double side) {
         super(side, side);
+        this.side = side;
+    }
+
+    @Override
+    public double getArea(){
+        return side * side;
+    }
+    @Override
+    public double getPerimeter(){
+        return 4 * side;
     }
 }
