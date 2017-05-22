@@ -14,11 +14,12 @@ public class ShapesTest {
 
             @Override
             public double getArea() {
-                return length * width;
+                return length * width;  //giving me errors when not here.
             }
         };
 
         System.out.println(myShape.getArea());
         System.out.println(myShape.getPerimeter());
+
     }
 }

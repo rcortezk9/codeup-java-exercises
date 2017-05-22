@@ -18,16 +18,16 @@ public class Rectanlge extends Quadralateral implements Measurable{
 
     @Override
     void setLength(double length) {
-
+        this.length = length;
     }
 
     @Override
     void setWidth(double width) {
-
+        this.width = width;
     }
 }
 
-class Square extends Quadralateral{
+class Square extends Quadralateral implements Measurable{
 
     public Square(double length, double width){
         super(length, width);
@@ -35,6 +35,7 @@ class Square extends Quadralateral{
 
     @Override
     public double getLength() {
+
         return super.getLength();
     }
 
@@ -45,12 +46,14 @@ class Square extends Quadralateral{
 
     @Override
     void setWidth(double width) {
-
+        this.width = width;
+        length = width;
     }
 
     @Override
     void setLength(double length) {
-
+        this.length = length;
+        width = length;
     }
 
     @Override
