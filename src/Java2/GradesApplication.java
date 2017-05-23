@@ -38,7 +38,7 @@ public class GradesApplication {
         System.out.println("Welcome!\nHere are the github usernames of our students:");
 
         students.forEach((key, value)->{
-            System.out.print("| " + key +" | ");//value.getGradeAverage() to get perspective avg.
+            System.out.print("| " + key +" | ");//to print out on same line with a pike to divide them.
         });
 
         getStudentInfo(students, input);

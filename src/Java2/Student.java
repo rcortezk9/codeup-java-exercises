@@ -28,7 +28,7 @@ public class Student {
         System.out.println("\nWhat student would you like to see more information on?\n");
         String mapCheck = input.nextLine();
 
-        if (students.get(mapCheck) == null){//if user selection is not in the array list
+        if (!students.containsKey(mapCheck)){//if user selection is not in the array list
             System.out.println("Sorry, no student found with the gihub username of \"" + mapCheck + "\".");
             anotherSelection(students, input);
         } else {//if selected correct username the display the student info
@@ -37,7 +37,7 @@ public class Student {
         anotherSelection(students, input);
     }
 
-    public static void anotherSelection(Map<String, Student>students, Scanner input){
+    public static void anotherSelection(Map<String, Student>students, Scanner input){// could a recursion call take the place of a while loop
         System.out.println("Would you like to see another student?");
         String response = input.nextLine();
         if(response.equalsIgnoreCase("y")){
@@ -45,7 +45,7 @@ public class Student {
         } else if (response.equalsIgnoreCase("n")){
             System.out.println("Goodbye, and have a wonderful day!");
             System.exit(0);
-        } else {
+        } else {//needed this incase user wanted to put in something other than what was except able.
             System.out.println("Incorrect selections, please make the proper selection (y/n)");
             anotherSelection(students, input);
         }
