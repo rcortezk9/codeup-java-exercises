@@ -17,10 +17,12 @@ public class Student {
     }
 
     public String getName() {
+
         return name;
     }
 
     public void addGrade(int grade){
+
         grades.add(grade);
     }
 
@@ -54,9 +56,10 @@ public class Student {
 
     public double getGradeAverage(){
         int sum = 0;
-        double average;
+
         for (int i = 0; i < grades.size(); i++)
             sum += grades.get(i);
-        return average = ((double) sum) / grades.size();
+
+        return ((double) sum) / grades.size();
     }
 }
