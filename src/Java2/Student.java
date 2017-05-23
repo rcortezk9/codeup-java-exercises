@@ -9,7 +9,7 @@ import java.util.Scanner;
  */
 public class Student {
     private String name;
-    private ArrayList <Integer> grades;
+    private ArrayList<Integer> grades;
 
     public Student(String name) {
         this.name = name;
@@ -17,12 +17,10 @@ public class Student {
     }
 
     public String getName() {
-
         return name;
     }
 
     public void addGrade(int grade){
-
         grades.add(grade);
     }
 
@@ -57,9 +55,9 @@ public class Student {
     public double getGradeAverage(){
         int sum = 0;
 
-        for (int i = 0; i < grades.size(); i++)
-            sum += grades.get(i);
-
-        return ((double) sum) / grades.size();
+        for (Integer grade : grades){//for loop thru array, assign it to grades
+            sum += grade;//add up the grades assign it to sum
+        }
+        return (double) sum / grades.size();//get the avg
     }
 }
