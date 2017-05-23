@@ -33,9 +33,11 @@ public class GradesApplication {
         students.get("MontealegreLuis").addGrade(95);
         students.get("MontealegreLuis").addGrade(96);
 
-       students.forEach((key, value)->{
-           System.out.println(key + value.getGradeAverage());
-       });
+        System.out.println("Welcome!\nHere are the github usernames of our students:");
+
+        students.forEach((key, value)->{
+            System.out.print("| " + key +" | ");//value.getGradeAverage() to get perspective avg.
+        });
 
 
     }
