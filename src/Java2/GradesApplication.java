@@ -11,38 +11,31 @@ public class GradesApplication {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
         String wantsToContinue;
-        Map<String, Integer> students = new HashMap<>();
+        Map<String, Student> students = new HashMap<>();
 
-        students.put("Bob", 90);
-        students.put("Bob", 80);
-        students.put("Bob", 97);
-        students.put("Bob", 91);
+        students.put("zgulde", new Student("Zach"));
+        students.get("zgulde").addGrade(90);
+        students.get("zgulde").addGrade(91);
+        students.get("zgulde").addGrade(92);
 
-        students.put("Tim", 99);
-        students.put("Tim", 89);
-        students.put("Tim", 95);
-        students.put("Tim", 83);
+        students.put("ryanorsinger", new Student("Ryan"));
+        students.get("ryanorsinger").addGrade(90);
+        students.get("ryanorsinger").addGrade(89);
+        students.get("ryanorsinger").addGrade(88);
 
-        students.put("Paul", 88);
-        students.put("Paul", 88);
-        students.put("Paul", 88);
-        students.put("Paul", 88);
+        students.put("jreich5", new Student("Jeremy"));
+        students.get("jreich5").addGrade(93);
+        students.get("jreich5").addGrade(92);
+        students.get("jreich5").addGrade(91);
 
-        students.put("Chris", 90);
-        students.put("Chris", 90);
-        students.put("Chris", 90);
-        students.put("Chris", 90);
+        students.put("MontealegreLuis", new Student("Luis"));
+        students.get("MontealegreLuis").addGrade(94);
+        students.get("MontealegreLuis").addGrade(95);
+        students.get("MontealegreLuis").addGrade(96);
 
-        do{
-            System.out.println("Welcome!\nHere are the names of our students:");
-            students.forEach((key, value)->{
-                System.out.println(key);
-            });
-            System.out.println("What student would you like to see more information on?");
-            if ()
-
-
-        } while()
+       students.forEach((key, value)->{
+           System.out.println(key + value.getGradeAverage());
+       });
 
 
     }
