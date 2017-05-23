@@ -4,6 +4,9 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Scanner;
 
+import static Java2.Student.anotherSelection;
+import static Java2.Student.getStudentInfo;
+
 /**
  * Created by renecortez on 5/22/17.
  */
@@ -38,7 +41,9 @@ public class GradesApplication {
             System.out.print("| " + key +" | ");//value.getGradeAverage() to get perspective avg.
         });
 
+        getStudentInfo(students, input);
 
+        anotherSelection(students, input);
 
     }
 }

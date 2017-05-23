@@ -25,7 +25,7 @@ public class Student {
     }
 
     public static void getStudentInfo(Map<String, Student>students, Scanner input){
-        System.out.println("What student would you like to see more information on?");
+        System.out.println("\nWhat student would you like to see more information on?\n");
         String mapCheck = input.nextLine();
 
         if (students.get(mapCheck) == null){//if user selection is not in the array list
