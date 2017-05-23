@@ -25,18 +25,32 @@ public class Student {
     }
 
     public static void getStudentInfo(Map<String, Student>students, Scanner input){
+        System.out.println("What student would you like to see more information on?");
         String mapCheck = input.nextLine();
 
-        if (students.get(mapCheck) == null){
+        if (students.get(mapCheck) == null){//if user selection is not in the array list
             System.out.println("Sorry, no student found with the gihub username of \"" + mapCheck + "\".");
             anotherSelection(students, input);
-        } else {
+        } else {//if selected correct username the display the student info
             System.out.println("\nName: " + students.get(mapCheck).getName() + " - Github Username: " + mapCheck + " Current Average: " + students.get(mapCheck).getGradeAverage());
-            anotherSelectiono(students, input);
         }
+        anotherSelection(students, input);
     }
 
+    public static void anotherSelection(Map<String, Student>students, Scanner input){
+        System.out.println("Would you like to see another student?");
+        String response = input.nextLine();
+        if(response.equalsIgnoreCase("y")){
+            getStudentInfo(students, input);
+        } else if (response.equalsIgnoreCase("n")){
+            System.out.println("Goodbye, and have a wonderful day!");
+            System.exit(0);
+        } else {
+            System.out.println("Incorrect selections, please make the proper selection (y/n)");
+            anotherSelection(students, input);
+        }
 
+    }
 
     public double getGradeAverage(){
         int sum = 0;

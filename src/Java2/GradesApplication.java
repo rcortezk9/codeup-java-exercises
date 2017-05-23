@@ -10,7 +10,6 @@ import java.util.Scanner;
 public class GradesApplication {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
-        String wantsToContinue;
         Map<String, Student> students = new HashMap<>();
 
         students.put("zgulde", new Student("Zach"));
