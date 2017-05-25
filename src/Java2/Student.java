@@ -22,6 +22,8 @@ public class Student {
 
     public void addGrade(int grade){
         grades.add(grade);
+        // save to file
+        // save to db
     }
 
     public static void getStudentInfo(Map<String, Student>students, Scanner input){
