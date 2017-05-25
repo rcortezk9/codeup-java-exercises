@@ -30,11 +30,18 @@ public class Input {
 
     public int getInt() {
         try {
-            String validatingInput = this.scanner.nextLine();
-            return Integer.valueOf(validatingInput);
+            return Integer.valueOf(this.getString());
         } catch (NumberFormatException e) {
             System.out.println("That's not an integer! Try again!");
-            getInt();
+            return getInt();
+        }
+    }
+    public int getInt(int min, int max) {
+        if (min <= Integer.valueOf(this.getString()) && max >= Integer.valueOf(this.getString())) {
+            return Integer.valueOf(this.getString());
+        } else {
+            System.out.println("That number doesn't fall within the range, enter one between " + min + " and " + max);
+            getInt(min, max);
             return 0;
         }
     }
@@ -42,30 +49,25 @@ public class Input {
 
     public double getDouble(double min, double max) {
         try {
-            String validatingInput = this.scanner.nextLine();
-            if (min <= Double.valueOf(validatingInput) && max >= Double.valueOf(validatingInput)) {
-                return Double.valueOf(validatingInput);
+            if (min <= Double.valueOf(this.getString()) && max >= Double.valueOf(this.getString())) {
+                return Double.valueOf(this.getString());
             } else {
                 System.out.println("That number doesn't fall within the range, enter one between " + min + " and " + max);
-                getDouble(min, max);
-                return 0;
+                return getDouble(min, max);
             }
         } catch (NumberFormatException e) {
             System.out.println("That is not an integer! Try again.");
-            getDouble(min, max);
-            return 0;
+            return getDouble(min, max);
         }
     }
 
 
     public double getDouble() {
         try {
-            String validatingInput = this.scanner.nextLine();
-            return Double.valueOf(validatingInput);
+            return Double.valueOf(this.getString());
         } catch (NumberFormatException e) {
             System.out.println("That's not a double! Try again.");
-            getDouble();
-            return 0;
+            return getDouble();
         }
     }
 
