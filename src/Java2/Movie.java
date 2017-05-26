@@ -20,6 +20,4 @@ public class Movie {
     public String getCategory(){
         return this.category;
     }
-
-
 }

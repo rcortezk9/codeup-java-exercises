@@ -37,8 +37,17 @@ public class Input {
         }
     }
     public int getInt(int min, int max) {
-        if (min <= Integer.valueOf(this.getString()) && max >= Integer.valueOf(this.getString())) {
-            return Integer.valueOf(this.getString());
+        int num;
+        try {
+            String possibleNumber = this.getString();
+            num = Integer.valueOf(possibleNumber);
+        } catch (NumberFormatException e) {
+            System.out.print("Please enter an interger between" + min +
+            " and " + max + ": ");
+            return getInt(min, max);
+        }
+        if (num >= min && num <= max) {
+            return num;
         } else {
             System.out.println("That number doesn't fall within the range, enter one between " + min + " and " + max);
             getInt(min, max);
